@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" >
+<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
+<xsl:template match="/">
+<html>
+<head>
+	<title>Annotations</title>
+	<script>
+		document.createElement('node');
+		document.createElement('pin');
+		document.createElement('key');
+		document.createElement('concept');
+		
+		document.createElement('lmb');
+		document.createElement('rmb');
+		document.createElement('mmb');
+		document.createElement('scroll');
+		
+		document.createElement('click');
+		document.createElement('click2');
+		document.createElement('hold');
+		document.createElement('release');
+	</script>
+
+	<LINK REL="StyleSheet" HREF="style.css" TYPE="text/css"/>
+</head>
+<body>
+<img src="!!IMAGEPATH!!" />
+ <xsl:for-each select="/PATCH/NODE">
+	<xsl:sort select="PIN[@pinname='Input String']/@values"/>
+ 
+	<xsl:if test="PIN[@pinname='Font']/@values['|Arial Black|']">
+	
+		<h2><xsl:value-of select="substring-after(substring-before(PIN[@pinname='Input String']/@values,']'), '[')" /></h2>
+		<p><xsl:value-of select="substring-before(substring-after(PIN[@pinname='Input String']/@values,']'), '|')" /></p>
+		 
+		 <!--
+			<tr>
+			<td><xsl:value-of select="PIN[@pinname='Input String']/@values" /></td>
+			<td><xsl:value-of select="BOUNDS/@left" /></td>
+			<td><xsl:value-of select="BOUNDS/@top" /></td>
+			<td><xsl:value-of select="PIN[@pinname='Font']/@values['|Arial Black|']" /></td>
+			</tr>
+		/!-->
+		
+	</xsl:if>
+ </xsl:for-each>
+</body>
+</html>
+</xsl:template>
+</xsl:stylesheet>
