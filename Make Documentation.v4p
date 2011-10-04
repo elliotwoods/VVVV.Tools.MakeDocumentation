@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
    <PATCH nodename="C:\kimchiandchips\Workshops\VVVV-basics,mapping\MakeDocumentation\Make Documentation.v4p" filename="C:\kimchiandchips\Workshops\VVVV-basics,mapping\tools\Make Documentation.v4p" systemname="Make Documentation">
-   <BOUNDS height="15045" left="0" top="0" type="Window" width="20565">
+   <BOUNDS height="15045" left="0" top="360" type="Window" width="11430">
    </BOUNDS>
    <NODE componentmode="Hidden" id="1" nodename="GetPatch (VVVV)" systemname="GetPatch (VVVV)">
    <BOUNDS height="100" left="300" top="1980" type="Node" width="100">
@@ -43,7 +43,7 @@
    </PIN>
    <PIN pinname="Parent Level">
    </PIN>
-   <PIN encoded="0" pinname="PatchName" slicecount="1" values="|..\2. IOBox #2.v4p|">
+   <PIN encoded="0" pinname="PatchName" slicecount="1" values="|..\4. DirectX.v4p|">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="10" nodename="XPath (XML)" systemname="XPath (XML)">
@@ -579,7 +579,7 @@
    <LINK dstnodeid="52" dstpinname="To" srcnodeid="53" srcpinname="Output String">
    </LINK>
    <NODE componentmode="Hidden" id="55" nodename="GDITexture (EX9.Texture)" systemname="GDITexture (EX9.Texture)">
-   <BOUNDS height="100" left="10890" top="72810" type="Node" width="100">
+   <BOUNDS height="100" left="10905" top="73560" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Source" visible="1">
    </PIN>
@@ -589,7 +589,7 @@
    <LINK dstnodeid="55" dstpinname="Source" srcnodeid="32" srcpinname="GDI Out">
    </LINK>
    <NODE componentmode="Hidden" id="56" nodename="Writer (EX9.Texture)" systemname="Writer (EX9.Texture)">
-   <BOUNDS height="270" left="10890" top="73965" type="Node" width="3450">
+   <BOUNDS height="270" left="10905" top="74715" type="Node" width="3450">
    </BOUNDS>
    <PIN pinname="Texture" visible="1">
    </PIN>
@@ -603,9 +603,9 @@
    <LINK dstnodeid="56" dstpinname="Texture" srcnodeid="55" srcpinname="Texture Out">
    </LINK>
    <NODE componentmode="InABox" id="57" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="12585" top="73020" type="Node" width="100">
+   <BOUNDS height="100" left="12600" top="73770" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="480" left="12585" top="73020" type="Box" width="480">
+   <BOUNDS height="480" left="12600" top="73770" type="Box" width="480">
    </BOUNDS>
    <PIN pinname="Value Type" slicecount="1" values="Boolean">
    </PIN>
@@ -622,12 +622,12 @@
    </NODE>
    <LINK dstnodeid="56" dstpinname="Save" srcnodeid="57" srcpinname="Y Output Value">
    </LINK>
-   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="60">
-   <BOUNDS type="Node" left="4800" top="14085" width="100" height="100">
+   <NODE componentmode="InABox" id="60" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="100" left="4800" top="14085" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="4800" top="14085" width="6075" height="240">
+   <BOUNDS height="240" left="4800" top="14085" type="Box" width="6075">
    </BOUNDS>
-   <PIN pinname="Input String" visible="1" slicecount="1" values="|C:\kimchiandchips\Workshops\VVVV-basics,mapping\|" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="1" values="|C:\kimchiandchips\Workshops\VVVV-basics,mapping\|">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
