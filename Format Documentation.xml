@@ -10,7 +10,7 @@
 		document.createElement('pin');
 		document.createElement('key');
 		document.createElement('concept');
-		
+	
 		document.createElement('lmb');
 		document.createElement('rmb');
 		document.createElement('mmb');
@@ -22,7 +22,7 @@
 		document.createElement('release');
 	</script>
 
-	<LINK REL="StyleSheet" HREF="style.css" TYPE="text/css"/>
+	<link rel="stylesheet" type="text/css" href="MakeDocumentation/style.css" />
 </head>
 <body>
 <img src="!!IMAGEPATH!!" />

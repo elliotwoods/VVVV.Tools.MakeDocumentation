@@ -1,20 +1,29 @@
 		h2 {font-family:Tahoma; font-size:14px; color:white; background:grey; padding:10px;}
 		h2 {font-family:Tahoma; font-size:14px; color:white; background:grey; padding:10px;}
 		p {font-family:Tahoma; font-size:14px; color:black;line-height:150%;}
-		ol {font-family:Tahoma; font-size:14px; color:black;}
-		li {padding-bottom: 30px;}
+		ol {font-family:Tahoma; font-size:14px; color:black;line-height:150%;}
+		ul {font-family:Tahoma; font-size:14px; color:black;line-height:150%;}
+		li {padding-bottom: 10px;}
 		
-		node {font-family:Tahoma, font-size:14px; color:black; background:#DDD; border-style:solid; padding:5px; border-left:thick double #888; border-right:thick double #888; border-top: none; border-bottom:none; }
+		node {
+			font-family:Tahoma, font-size:14px; color:black;
+			background:#DDD;
+			border-style:solid;
+			border-left:none; border-right:none;
+			border-top: 4px solid #AAA; border-bottom:4px solid #AAA;
+			padding-top:0px; padding-bottom:0px; 
+			padding-left:5px; padding-right:5px;
+			}
 		pin {background:#; border-bottom:3px groove #AAA;}
-		key {border:2px ridge; background: #DDD; color: #000; padding: 2px;}
+		key {border:1px solid; background: #DDD; color: #000; padding: 2px;}
 		concept {background:#; border-bottom:3px solid #CCC;}
 		
-		lmb {width: 30px; height:30px; background-image:url('C:\kimchiandchips\Workshops\VVVV-basics,mapping\tools\lmb.png');}
-		rmb {width: 30px; height:30px; background-image:url('C:\kimchiandchips\Workshops\VVVV-basics,mapping\tools\rmb.png');}
-		mmb {width: 30px; height:30px; background-image:url('C:\kimchiandchips\Workshops\VVVV-basics,mapping\tools\mmb.png');}
-		scroll {width: 30px; height:30px; background-image:url('C:\kimchiandchips\Workshops\VVVV-basics,mapping\tools\scroll.png');}
+		lmb {width: 30px; height:30px; background-image:url('resources/lmb.png');}
+		rmb {width: 30px; height:30px; background-image:url('resources/rmb.png');}
+		mmb {width: 30px; height:30px; background-image:url('resources/mmb.png');}
+		scroll {width: 30px; height:30px; background-image:url('resources/scroll.png');}
 	
-		click {width: 10px; height:30px; background-image:url('C:\kimchiandchips\Workshops\VVVV-basics,mapping\tools\click.png');}
-		click2 {width: 10px; height:30px; background-image:url('C:\kimchiandchips\Workshops\VVVV-basics,mapping\tools\click2.png');}
-		hold {width: 10px; height:30px; background-image:url('C:\kimchiandchips\Workshops\VVVV-basics,mapping\tools\hold.png');}
-		release {width: 10px; height:30px; background-image:url('C:\kimchiandchips\Workshops\VVVV-basics,mapping\tools\release.png');}
+		click {width: 10px; height:30px; background-image:url('resources/click.png');}
+		click2 {width: 10px; height:30px; background-image:url('resources/click2.png');}
+		hold {width: 10px; height:30px; background-image:url('resources/hold.png');}
+		release {width: 10px; height:30px; background-image:url('resources/release.png');}
