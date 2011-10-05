@@ -1,5 +1,7 @@
 Make documentation for VVVV files using special syntax within comments.
 
+NOTE: Currently you must manaully copy the 'resources' folder to the patch's folder
+
 Generally the idea is to create havy comments which are hidden in all but title, then render out the full text in HTML.
 
 So far I think going this way does save time / keep things together quite well (instead of using a seperate word processor).
