@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
-   <PATCH nodename="C:\kimchiandchips\Workshops\VVVV-basics,mapping\MakeDocumentation\Make Documentation.v4p" filename="C:\kimchiandchips\Workshops\VVVV-basics,mapping\tools\Make Documentation.v4p" systemname="Make Documentation">
-   <BOUNDS height="15045" left="0" top="360" type="Window" width="11430">
+   <PATCH nodename="C:\kimchiandchips\Workshops\VVVV.Tools.MakeDocumentation\Make Documentation.v4p" filename="C:\kimchiandchips\Workshops\VVVV-basics,mapping\tools\Make Documentation.v4p" systemname="Make Documentation">
+   <BOUNDS height="15045" left="0" top="360" type="Window" width="16185">
    </BOUNDS>
    <NODE componentmode="Hidden" id="1" nodename="GetPatch (VVVV)" systemname="GetPatch (VVVV)">
    <BOUNDS height="100" left="300" top="1980" type="Node" width="100">
@@ -43,7 +43,7 @@
    </PIN>
    <PIN pinname="Parent Level">
    </PIN>
-   <PIN encoded="0" pinname="PatchName" slicecount="1" values="|..\4. DirectX.v4p|">
+   <PIN encoded="0" pinname="PatchName" slicecount="1" values="|..\VVVV.Tutorials.Fundamentals\2. IOBox 2.v4p|">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="10" nodename="XPath (XML)" systemname="XPath (XML)">
@@ -425,9 +425,9 @@
    <NODE componentmode="InABox" id="45" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="100" left="8355" top="9360" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="2070" left="8355" top="9360" type="Box" width="1680">
+   <BOUNDS height="675" left="8355" top="9360" type="Box" width="1635">
    </BOUNDS>
-   <PIN pinname="Rows" slicecount="1" values="10">
+   <PIN pinname="Rows" slicecount="1" values="3">
    </PIN>
    <PIN pinname="Show Grid" slicecount="1" values="1">
    </PIN>
@@ -437,15 +437,15 @@
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
-   <PIN encoded="0" pinname="Input String" slicecount="10" values="&amp;lt;,&amp;gt;,|&lt;br /&gt;|,,,,,,,">
+   <PIN encoded="0" pinname="Input String" slicecount="3" values="&amp;lt;,&amp;gt;,|&lt;br /&gt;|">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="46" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="100" left="10005" top="9360" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="2070" left="10005" top="9360" type="Box" width="1680">
+   <BOUNDS height="675" left="10005" top="9360" type="Box" width="1635">
    </BOUNDS>
-   <PIN pinname="Rows" slicecount="1" values="10">
+   <PIN pinname="Rows" slicecount="1" values="3">
    </PIN>
    <PIN pinname="Show Grid" slicecount="1" values="1">
    </PIN>
@@ -455,13 +455,9 @@
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
-   <PIN encoded="0" pinname="Input String" slicecount="10" values="&lt;,&gt;,&lt;/p&gt;&lt;p&gt;,,,,,,,">
+   <PIN encoded="0" pinname="Input String" slicecount="3" values="&lt;,&gt;,&lt;/p&gt;&lt;p&gt;">
    </PIN>
    </NODE>
-   <LINK dstnodeid="44" dstpinname="From" srcnodeid="45" srcpinname="Output String">
-   </LINK>
-   <LINK dstnodeid="44" dstpinname="To" srcnodeid="46" srcpinname="Output String">
-   </LINK>
    <NODE componentmode="Hidden" id="47" nodename="Writer (File)" systemname="Writer (File)">
    <BOUNDS height="270" left="7140" top="13200" type="Node" width="2955">
    </BOUNDS>
@@ -473,7 +469,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="48" nodename="XPath (XML)" systemname="XPath (XML)">
-   <BOUNDS height="100" left="10020" top="12315" type="Node" width="100">
+   <BOUNDS height="100" left="3495" top="12255" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="XML Input" visible="1">
    </PIN>
@@ -627,15 +623,121 @@
    </BOUNDS>
    <BOUNDS height="240" left="4800" top="14085" type="Box" width="6075">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="1" values="|C:\kimchiandchips\Workshops\VVVV-basics,mapping\|">
+   <PIN encoded="0" pinname="Input String" visible="1">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="60" srcpinname="Output String" dstnodeid="32" dstpinname="Base" linkstyle="VHV">
+   <LINK dstnodeid="32" dstpinname="Base" linkstyle="VHV" srcnodeid="60" srcpinname="Output String">
    <LINKPOINT x="4860" y="14415">
    </LINKPOINT>
    <LINKPOINT x="8805" y="14415">
    </LINKPOINT>
+   </LINK>
+   <NODE systemname="TruncatePath (File)" filename="plugins\FileTruncatePath\FileTruncatePath.csproj" nodename="TruncatePath (File)" componentmode="Hidden" id="61">
+   <BOUNDS type="Node" left="3495" top="12765" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Full Path" visible="1">
+   </PIN>
+   <PIN pinname="Directory Path" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="48" srcpinname="Output" dstnodeid="61" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="48" srcpinname="Output" dstnodeid="61" dstpinname="Full Path">
+   </LINK>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="64">
+   <BOUNDS type="Node" left="3495" top="13200" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="\" encoded="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="61" srcpinname="Directory Path" dstnodeid="64" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="64" srcpinname="Output" dstnodeid="60" dstpinname="Input String">
+   </LINK>
+   <NODE componentmode="InABox" id="66" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="100" left="10050" top="4095" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="1905" left="10050" top="4095" type="Box" width="1650">
+   </BOUNDS>
+   <PIN pinname="Rows" slicecount="1" values="8">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show SliceIndex" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Input String" slicecount="8" values="lmb,rmb,mmb,scroll,hold,release,click,click2">
+   </PIN>
+   </NODE>
+   <NODE systemname="Cons (String)" filename="%VVVV%\plugins\SpreadOperations.dll" nodename="Cons (String)" componentmode="Hidden" id="67">
+   <BOUNDS type="Node" left="8370" top="11370" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="67" srcpinname="Output" dstnodeid="44" dstpinname="From">
+   </LINK>
+   <LINK srcnodeid="45" srcpinname="Output String" dstnodeid="67" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="Cons (String)" filename="%VVVV%\plugins\SpreadOperations.dll" nodename="Cons (String)" componentmode="Hidden" id="68">
+   <BOUNDS type="Node" left="10020" top="11370" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="68" srcpinname="Output" dstnodeid="44" dstpinname="To">
+   </LINK>
+   <LINK srcnodeid="46" srcpinname="Output String" dstnodeid="68" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="69">
+   <BOUNDS type="Node" left="11535" top="6600" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" slicecount="1" values="|&lt;img src=&quot;html_resources/|" encoded="0">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" slicecount="1" values=".png&quot;" encoded="0">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="69" srcpinname="Output" dstnodeid="68" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="66" srcpinname="Output String" dstnodeid="69" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="70">
+   <BOUNDS type="Node" left="9855" top="6375" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" slicecount="1" values="&lt;" encoded="0">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="66" srcpinname="Output String" dstnodeid="70" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="70" srcpinname="Output" dstnodeid="67" dstpinname="Input 2">
    </LINK>
    </PATCH>

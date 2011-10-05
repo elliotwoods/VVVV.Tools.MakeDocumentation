@@ -22,7 +22,7 @@
 		document.createElement('release');
 	</script>
 
-	<link rel="stylesheet" type="text/css" href="MakeDocumentation/style.css" />
+	<link rel="stylesheet" type="text/css" href="html_resources/style.css" />
 </head>
 <body>
 <img src="!!IMAGEPATH!!" />
